@@ -1,4 +1,4 @@
-from turtle import title
+# from turtle import title
 from django.shortcuts import render
 from django.http  import HttpResponse
 from .models import Images

@@ -1,9 +1,26 @@
 from email.mime import image
-from turtle import update
+# from turtle import update
 from unicodedata import category, name
 from django.db import models
 
 # Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=120)
+    def __str__(self):
+        return self.name
+
+    def save_category(self):
+        self.save()
+    
+    def delete_category(self):
+
+        self.delete()
+    @classmethod
+    def update_category(cls ,id ,name):
+      return cls.objects.filter(id = id).update(name = name)
+
+
+
 class Images(models.Model):
     image = models.ImageField(upload_to = 'photos/',default="",null=True)
     name = models.CharField(max_length=50,null=True)
