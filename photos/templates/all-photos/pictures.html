@@ -23,7 +23,17 @@
    
     <div class="view">
         <a href="" >
-            <button class="btn btn-lg btn-secondary">View All  the Photos</button>
+            <button class="btn btn-lg btn-secondary"> Photos</button>
           </a>
+
+          {% for image in images %}
+     <h3>Photo Details</h3>
+     <ul>
+         <li>image-name {{image.name}} </li>
+         <li>image-url {{image.url}}</li>
+         <li>image-description {{image.description}} </li>
+         <li>image-location {{image.location}}</li>
+     </ul>
+    {% endfor %}
     </div>
     {% endblock %}

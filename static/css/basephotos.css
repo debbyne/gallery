@@ -1,11 +1,11 @@
 *{
     font-family: 'Inconsolata', monospace;
-    padding-left: 15px;
+    padding-left: 7px;
     color: white;
     
 }
 .head{
-    height: 50px;
+    height: 13%;
     background-color: rgb(48, 11, 49);
     color: white;
 }
