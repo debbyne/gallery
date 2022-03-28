@@ -7,4 +7,17 @@ from .models import Images
 def index(request):
     images = Images.objects.all()
     title= 'Thee Dev Gallery'
-    return HttpResponse(request, {"images":images, "title":title})
+    return HttpResponse(request, 'pictures.html', {"images":images, "title":title})
+
+def search_results(request):
+
+    if 'image' in request.GET and request.GET["image"]:
+        search_term = request.GET.get("image")
+        searched_image = Images.search_image_by_category(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'all-photos/search.html',{"message":message,"images": searched_image})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-photos/search.html',{"message":message})
