@@ -2,7 +2,7 @@
     {% block content %}
     <div class="head">
         <h3>
-           <a href=""> Thee Dev Gallery</a>
+           <a href=""> Thee Dev <span>Gallery</span></a>
         </h3>
     </div>
     <!-- Adding a search form  -->
@@ -13,27 +13,26 @@
           <div class="input-group">
             <div class="search">
                 <input id="search_input" type="text"  placeholder="Search fashion,music,nature,memes,fun..." >
-                <label  value="submit" for="search-input"><span class="glyphicon glyphicon-search search-icon"></span></label> <br> <br>
+                <label  value="submit" for="search-input"><span class="glyphicon glyphicon-search search-icon"></span></label>
             </div>
           </div>
   
         </form>
-     
+      
       <!-- search form end -->
    
     <div class="view">
-        <a href="" >
-            <button class="btn btn-lg btn-secondary"> Photos</button>
-          </a>
-
+        <a href=""><h5>Photo Display</h5></a>
           {% for image in images %}
-     <h3>Photo Details</h3>
-     <ul>
-         <li>image-name {{image.name}} </li>
-         <li>image-url {{image.url}}</li>
-         <li>image-description {{image.description}} </li>
-         <li>image-location {{image.location}}</li>
-     </ul>
+    <div class="card">
+    <div class="card-title">
+        {{image.name}}
+    </div>
+    <div class="card-body">
+        <img class="img-responsive" src="{{image.image.url}}" alt="">
+    </div>
+       
+    </div>
     {% endfor %}
     </div>
     {% endblock %}

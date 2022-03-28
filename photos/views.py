@@ -5,7 +5,7 @@ from .models import Images
 
 # Create your views here.
 def index(request):
-    images = Images.objects.all()
+    images = Images.get_images()
     title= 'Thee Dev Gallery'
     return render(request, 'all-photos/pictures.html', {"images":images, "title":title})
 
