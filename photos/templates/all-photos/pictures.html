@@ -1,12 +1,29 @@
 {%extends 'all-photos/base.html'%}
     {% block content %}
-    <div class="search">
-        <input id="search_input" type="text"  placeholder="Search fashion,music,nature,memes,fun..." >
-        <label  value="submit" for="search-input"><span class="glyphicon glyphicon-search search-icon"></span></label> <br> <br>
+    <div class="head">
+        <h3>
+           <a href=""> Thee Dev Gallery</a>
+        </h3>
     </div>
+    <!-- Adding a search form  -->
+
+  
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+  
+          <div class="input-group">
+            <div class="search">
+                <input id="search_input" type="text"  placeholder="Search fashion,music,nature,memes,fun..." >
+                <label  value="submit" for="search-input"><span class="glyphicon glyphicon-search search-icon"></span></label> <br> <br>
+            </div>
+          </div>
+  
+        </form>
+     
+      <!-- search form end -->
+   
     <div class="view">
         <a href="" >
-            <button class="btn btn-lg btn-primary">View All  the Photos</button>
+            <button class="btn btn-lg btn-secondary">View All  the Photos</button>
           </a>
     </div>
     {% endblock %}
