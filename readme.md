@@ -22,9 +22,10 @@ django-bootstrap
 # Setup
 In Terminal:
 git clone https://github.com/debbyne/gallery.git
+
  cd GALLERY
  code .
-# RUnning Application
+# Running Application
 create a virtual environment
 run python3.8 manage.py runserver
 # Technologies Used
