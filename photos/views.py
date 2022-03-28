@@ -7,7 +7,7 @@ from .models import Images
 def index(request):
     images = Images.objects.all()
     title= 'Thee Dev Gallery'
-    return HttpResponse(request, 'pictures.html', {"images":images, "title":title})
+    return render(request, 'all-photos/pictures.html', {"images":images, "title":title})
 
 def search_results(request):
 
