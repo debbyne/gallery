@@ -34,8 +34,11 @@ padding-bottom: 0px;
 }
 .photos{
     font-size: 13px;
+    background-color: rgb(241, 241, 241);
 }
 .photos h5{
     text-align: center;
     color: rgb(48, 59, 59);
+    
 }
+

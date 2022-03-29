@@ -1,3 +1,21 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-family: 'Inconsolata', monospace;background: rgb(219, 238, 238); padding-left: 150px; " class="container"  >
     
-</div>
+        <h3>Photo Details</h3>
+        
+            <h4>Name :{{images.name}}</h4>
+            <img class="img-responsive" src="{{images.image.url}}" alt="image" style="width: 270px; height: 240px;">
+            <p>Description :{{images.description}}</p>
+            <h4>Location :{{images.location}}</h4>
+        
+   </div>
+</body>
+</html>
