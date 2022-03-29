@@ -1,13 +1,12 @@
 {%extends 'all-photos/base.html'%}
     {% block content %}
+    <div class="container-fluid">
     <div class="head">
         <h3>
            <a href=""> Thee Dev <span>Gallery</span></a>
         </h3>
     </div>
     <!-- Adding a search form  -->
-
-  
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
   
           <div class="input-group">
@@ -20,25 +19,41 @@
         </form>
       
       <!-- search form end -->
-      {{title}} <br>
-      {% for image in images %}
-      {{image.name}} <br>
-      {{image.description}} <br>
-      <img class="img-responsive" src="{{image.image.url}}" alt="image">
-      {% endfor %}
-    <div class="view">
      
-          
-    <div class="card">
-    <div class="card-title">
-        {{image.name}}
+     
+      <!-- {{image.name}} <br>
+       -->
+    <div class="photos">
+      <h5>Photo Display</h5>
+<div class="row">
+  <!-- <div class="col">  -->
+      <!-- {% for image in images %}
+        <div class="col-md-4">
+          <div class="card">
+             <div class="card-body">
+            <img class="img-responsive" src="{{image.image.url}}" alt="image" height="100px" width="100px">
+             </div>
+          <div class="card-footer">
+            {{image.name}}
+            </div>
+           </div>
+        </div>
+      {% endfor %} -->
+    <!-- </div> -->
+  
+  </div>
+
+  <div class="container">
+    <div class="row">
+      {% for image in images %}
+       <div class="col-md-4">
+         <div class="thumbnail">
+          <img class="img-responsive" src="{{image.image.url}}" alt="image" height="100px" width="100px">
+          {{image.name}}
+         </div>
+        
+       </div>
+      {% endfor %}
     </div>
-    <div class="card-body">
-      
-       
-    </div>
-       
-    </div>
-   
-    </div>
+  </div>
     {% endblock %}

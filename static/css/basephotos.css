@@ -1,8 +1,10 @@
 *{
     font-family: 'Inconsolata', monospace;
     padding-left: 7px;
-    color: white;
+    color: black;
     
+}.container-fluid{
+    font-family: 'Inconsolata', monospace;
 }
 .head{
     height: 55px;
@@ -30,7 +32,10 @@ padding-bottom: 0px;
     color: black;
     font-size: 7px;
 }
-.view h5{
+.photos{
+    font-size: 13px;
+}
+.photos h5{
     text-align: center;
-    color: black;
+    color: rgb(48, 59, 59);
 }
