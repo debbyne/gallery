@@ -20,19 +20,25 @@
         </form>
       
       <!-- search form end -->
-   
+      {{title}} <br>
+      {% for image in images %}
+      {{image.name}} <br>
+      {{image.description}} <br>
+      <img class="img-responsive" src="{{image.image.url}}" alt="image">
+      {% endfor %}
     <div class="view">
-        <a href=""><h5>Photo Display</h5></a>
-          {% for image in images %}
+     
+          
     <div class="card">
     <div class="card-title">
         {{image.name}}
     </div>
     <div class="card-body">
-        <img class="img-responsive" src="{{image.image.url}}" alt="">
+      
+       
     </div>
        
     </div>
-    {% endfor %}
+   
     </div>
     {% endblock %}

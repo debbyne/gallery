@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from tempfile import  template
+import cloudinary.api
+import cloudinary
+import cloudinary.uploader
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,10 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photos',
-    'bootstrap3'
+    'bootstrap3',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,8 +86,11 @@ WSGI_APPLICATION = 'galleryapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gallery',
+        'USER': 'moringa',
+    'PASSWORD':'Access',
+    'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }
 
@@ -110,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -134,3 +143,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+cloudinary.config( 
+  cloud_name = "dtbixh0z3", 
+  api_key = "832652891133987", 
+  api_secret = "CVnT9TNu9tfvSEUnXcN_1fIm4Eo" 
+
+)
