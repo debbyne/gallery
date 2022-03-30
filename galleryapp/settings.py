@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 # from tempfile import  template
@@ -43,6 +44,7 @@ MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
+# DEBUG = False
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
@@ -57,7 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photos',
-    'bootstrap5',
+    'bootstrap3',
     'cloudinary',
 
 ]
@@ -93,7 +95,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'galleryapp.wsgi.application'
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gallery' ,
+#         'USER': 'moringa',
+#         'PASSWORD':'Access' ,
+#         # 'PORT': '',
+#         # 'HOST':config('DB_HOST ')
+#     }
+# }
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <div style="font-family: 'Inconsolata', monospace;background: rgb(219, 238, 238); padding-left: 150px; " class="container"  >
     
-        <h3>Photo Details</h3>
         
-            <h4>Name :{{images.name}}</h4>
-            <img class="img-responsive" src="{{images.image.url}}" alt="image" style="width: 270px; height: 240px;">
-            <p>Description :{{images.description}}</p>
-            <h4>Location :{{images.location}}</h4>
         
-   </div>
+        <h4>Name :{{images.name}}</h4>
+        <img class="img-responsive" src="{{images.image.url}}" alt="image" style="width: 270px; height: 240px;">
+        <div class="btn">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <h3>Photo Details</h3>
+            </button>
+        </div>
+<!-- The Modal -->
+
+<div class="modal" id="exampleModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+  <!-- Modal Header -->
+  <div class="modal-header">
+    <h4 class="modal-title">{{images.name}}</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    
+  </div>
+
+  <!-- Modal body -->
+  <div class="modal-body">
+
+              <img style="width: 50%; height: 210px;" src="{{images.image.url}}" alt="image">
+              <div class="details">
+              <p class="text-center"> {{images.description}}</p>
+              <p class="text-center">Location: {{images.location}}</p>
+              <p class="text-center">Category: {{images.category}}</p>
+            </div>
+  </div>
+
+  <!-- Modal footer -->
+  <div class="modal-footer">
+          <input class="form-control input-lg" type="text"  value="{{images.image.url}}" id="{{images.id}}.url">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success " onclick="copyLink('{{images.id}}.url')">copy</button>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>
+
+
+    
+
+
+

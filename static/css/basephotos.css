@@ -1,15 +1,11 @@
 *{
     font-family: 'Inconsolata', monospace;
-    padding-left: 7px;
     color: black;
-    font-size: 22px;
     
-}.container-fluid{
-    font-family: 'Inconsolata', monospace;
 }
 .head h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 34px;
 }
 .head{
     height: 60px;
@@ -32,18 +28,33 @@ border-radius: 1px;
 border: 0.5px solid rgb(83, 80, 80);
 font-size: 7px;
 padding-bottom: 0px;
+padding-left: 3px;
+margin-left: 30px;
 }
 .glyphicon{
     color: black;
     font-size: 8px;
 }
-.photos{
-    font-size: 13px;
-    background-color: rgb(241, 241, 241);
-}
 .photos h5{
     text-align: center;
-    color: rgb(48, 59, 59);
-    
 }
-
+.photos{
+    margin-left: 50px;
+}
+.modal-title{
+    text-align: center;
+    background-color: rgb(29, 26, 26);
+    color: aqua;
+}
+.modal-body{
+    background-color: rgb(238, 238, 238);
+    padding-left: 140px;
+}
+.details{
+    padding-right: 250px;
+}
+.btn{
+background-color: white;
+color: black;
+border: 0px;
+}
