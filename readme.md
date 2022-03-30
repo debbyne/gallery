@@ -4,8 +4,7 @@
 Debbyne Kinya
 
 # Preview of the page
-![Landing page photo](https://github.com/CynthiaOuma12673/mygallery/blob/master/media/images/screenshot.png)
-
+![Landing page photo]
 
 # Description
 The user can be able to :
