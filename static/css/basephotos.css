@@ -7,8 +7,9 @@
 }.container-fluid{
     font-family: 'Inconsolata', monospace;
 }
-.head h3{
+.head h1{
     text-align: center;
+    font-size: 30px;
 }
 .head{
     height: 60px;
