@@ -2,7 +2,7 @@
     font-family: 'Inconsolata', monospace;
     padding-left: 7px;
     color: black;
-    
+    font-size: 18px;
     
 }.container-fluid{
     font-family: 'Inconsolata', monospace;
@@ -31,7 +31,7 @@ padding-bottom: 0px;
 }
 .glyphicon{
     color: black;
-    font-size: 7px;
+    font-size: 8px;
 }
 .photos{
     font-size: 13px;
