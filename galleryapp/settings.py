@@ -59,12 +59,10 @@ INSTALLED_APPS = [
     'photos',
     'bootstrap5',
     'cloudinary',
-    'django_heroku'
 
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'galleryapp.urls'
@@ -105,7 +104,6 @@ if config('MODE')=="dev":
         'NAME':  config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
-        'DISABLE_SERVER_SIDE_CURSORS': True,
         'PORT': '',
         'HOST':config('DB_HOST ')
     }
