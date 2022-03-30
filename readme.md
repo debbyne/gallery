@@ -3,6 +3,10 @@
 # Author
 Debbyne Kinya
 
+# Preview of the page
+
+
+
 # Description
 The user can be able to :
 1.View different photos that interest me.
