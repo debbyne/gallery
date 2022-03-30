@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-from tempfile import  template
+# from tempfile import  template
 import cloudinary.api
 import cloudinary
 import cloudinary.uploader
