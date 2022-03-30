@@ -2,10 +2,13 @@
     font-family: 'Inconsolata', monospace;
     padding-left: 7px;
     color: black;
-    font-size: 18px;
+    font-size: 23px;
     
 }.container-fluid{
     font-family: 'Inconsolata', monospace;
+}
+.head h3{
+    text-align: center;
 }
 .head{
     height: 55px;
