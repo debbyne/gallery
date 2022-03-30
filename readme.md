@@ -4,7 +4,7 @@
 Debbyne Kinya
 
 # Preview of the page
-![Landing page photo]
+![Landing page photo] ('https://github.com/debbyne/gallery/tree/master/media/photos')
 
 # Description
 The user can be able to :
